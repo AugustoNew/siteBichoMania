@@ -108,15 +108,22 @@ Os horarios ocupados ou bloqueados deixam de aparecer como disponiveis para novo
 
 ## 8. Banco de dados
 
-Os dados sao armazenados no arquivo:
+Localmente, o sistema usa o arquivo `bicho-mania.db` por meio de `@libsql/client`, sem dependencia nativa. Na Vercel, use um banco LibSQL/Turso persistente com estas variaveis de ambiente:
 
 ```text
-bicho-mania.db
+TURSO_DATABASE_URL=libsql://seu-banco.turso.io
+TURSO_AUTH_TOKEN=seu-token
 ```
 
-Esse arquivo fica na pasta principal do projeto. O sistema usa SQLite e cria automaticamente o arquivo e as tabelas necessarias quando e iniciado pela primeira vez.
+No primeiro deploy, configure as variaveis na Vercel para os ambientes Production, Preview e Development. Para transferir os dados do arquivo local para o banco hospedado, execute na pasta do projeto:
 
-O banco guarda, entre outros dados, servicos, clientes, animais, agendamentos, horarios bloqueados, configuracoes e usuario administrativo.
+```powershell
+$env:TURSO_DATABASE_URL="libsql://seu-banco.turso.io"
+$env:TURSO_AUTH_TOKEN="seu-token"
+npm run migrate:db
+```
+
+O migrador preserva servicos, clientes, animais, agendamentos, horarios bloqueados, configuracoes e usuario administrativo. A Vercel nao deve receber nem usar o arquivo SQLite local como banco de producao.
 
 ## 9. Google Maps
 
