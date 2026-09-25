@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Agendar agora | Bicho Mania</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/styles.css" />
+        <link rel="stylesheet" href="/admin-modal.css" />
+    </head>
+    <body class="booking-page">
+        <header class="site-header">
+            <a class="brand" href="/" aria-label="Bicho Mania"
+                ><img
+                    class="brand-logo brand-logo-page"
+                    src="/logo.png"
+                    alt="Bicho Mania"
+            /></a
+            >
+            <a class="text-link" href="/"
+                >Voltar para o início <span>←</span></a
+            >
+        </header>
+        <main class="booking-page-main">
+            <div class="section-shell">
+                <div class="booking-page-header">
+                    <p class="eyebrow">Agendamento</p>
+                    <h1>Vamos marcar um<br /><em>momento especial?</em></h1>
+                    <p class="muted">
+                        Escolha o cuidado, o horário e conte um pouco sobre
+                        vocês.
+                    </p>
+                </div>
+                <form id="booking-form" class="booking-form booking-card">
+                    <div class="form-progress">
+                        <span class="active">1</span><i></i><span>2</span>
+                    </div>
+                    <div class="step-heading">
+                        <span>01</span>
+                        <div>
+                            <h3>Detalhes do atendimento</h3>
+                            <p>Escolha o serviço, data e horário.</p>
+                        </div>
+                    </div>
+                    <label
+                        >Serviço<select id="service-id" required>
+                            <option value="">Carregando serviços...</option>
+                        </select></label
+                    >
+                    <div class="input-grid">
+                        <label
+                            >Data<input id="booking-date" type="date" required
+                        /></label>
+                        <div>
+                            <label>Horário</label>
+                            <div id="availability" class="availability">
+                                <span class="muted">Escolha uma data.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-heading booking-person-heading">
+                        <span>02</span>
+                        <div>
+                            <h3>Informações pessoais</h3>
+                            <p>Assim podemos preparar tudo com carinho.</p>
+                        </div>
+                    </div>
+                    <div class="input-grid">
+                        <label
+                            >Nome do responsável<input
+                                name="customerName"
+                                placeholder="Como podemos te chamar?"
+                                required /></label
+                        ><label
+                            >Telefone / WhatsApp<input
+                                id="phone"
+                                name="phone"
+                                inputmode="tel"
+                                maxlength="15"
+                                placeholder="(49) 99999-9999"
+                                required
+                            /><span
+                                id="phone-error"
+                                class="field-error"
+                                role="alert"
+                                hidden
+                                >Informe um telefone celular válido.</span
+                            ></label
+                        ><label
+                            >Nome do animal<input
+                                name="petName"
+                                placeholder="Nome do seu melhor amigo"
+                                required /></label
+                        ><label
+                            >Tipo de animal<select name="species" required>
+                                <option value="">Selecione</option>
+                                <option>Cachorro</option>
+                                <option>Gato</option>
+                                <option>Outro</option>
+                            </select></label
+                        >
+                    </div>
+                    <label
+                        >Observações<textarea
+                            name="notes"
+                            placeholder="Alguma necessidade especial ou detalhe importante?"
+                        ></textarea>
+                    </label>
+                    <div class="form-actions">
+                        <a class="button button-ghost" href="/">Cancelar</a
+                        ><button class="button" type="submit">
+                            Continuar para confirmação <span>→</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer class="page-footer">
+            Bicho Mania · <a href="/">Página principal</a>
+        </footer>
+        <script src="/booking.js"></script>
+    </body>
+</html>

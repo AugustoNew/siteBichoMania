@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Confirmação | Bicho Mania</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+    <body class="booking-page">
+        <header class="site-header">
+            <a class="brand" href="/" aria-label="Bicho Mania"
+                ><img
+                    class="brand-logo brand-logo-page"
+                    src="/logo.png"
+                    alt="Bicho Mania"
+            /></a
+            ><a class="text-link" href="/booking.html">Voltar <span>←</span></a>
+        </header>
+        <main class="booking-page-main">
+            <div class="section-shell">
+                <div class="booking-page-header">
+                    <p class="eyebrow">Confirmação</p>
+                    <h1>Revise seu<br /><em>agendamento.</em></h1>
+                    <p class="muted">
+                        A estrutura do agendamento está pronta. Clique no 
+                        botão de cofirmação para agendar.
+                    </p>
+                </div>
+                <form id="payment-form" class="booking-form booking-card">
+                    <div class="form-progress">
+                        <span class="active">1</span><i></i
+                        ><span class="active">2</span>
+                    </div>
+                    <h3>Resumo do agendamento</h3>
+                    <div id="summary" class="payment-summary"></div>
+                    <div class="form-actions">
+                        <a class="button button-ghost" href="/booking.html"
+                            >Voltar</a
+                        ><button class="button" type="submit">
+                            Confirmar agendamento <span>→</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer class="page-footer">
+            Bicho Mania · <a href="/">Página principal</a>
+        </footer>
+        <script src="/payment.js"></script>
+    </body>
+</html>

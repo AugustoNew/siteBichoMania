@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Agendamento confirmado | Bicho Mania</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+    <body class="booking-page">
+        <header class="site-header">
+            <a class="brand" href="/" aria-label="Bicho Mania"
+                ><img
+                    class="brand-logo brand-logo-page"
+                    src="/logo.png"
+                    alt="Bicho Mania"
+            /></a
+            >
+        </header>
+        <main class="booking-page-main">
+            <div class="section-shell">
+                <div class="success-view booking-card">
+                    <div class="success-icon">✓</div>
+                    <p class="eyebrow">Tudo certo por aqui</p>
+                    <h1>Agendamento realizado<br /><em>com sucesso!</em></h1>
+                    <p>
+                        Seu melhor amigo já tem um momento reservado com a
+                        gente.
+                    </p>
+                    <div id="confirmation" class="confirmation-card"></div>
+                    <a
+                        id="whatsapp-link"
+                        class="button whatsapp"
+                        target="_blank"
+                        rel="noreferrer"
+                        >Enviar confirmação pelo WhatsApp <span>↗</span></a
+                    ><br /><a class="text-link" href="/"
+                        >Voltar para a página principal</a
+                    >
+                </div>
+            </div>
+        </main>
+        <footer class="page-footer">
+            Bicho Mania · <a href="/">Página principal</a>
+        </footer>
+        <script src="/confirmation.js"></script>
+    </body>
+</html>
